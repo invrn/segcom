@@ -7,7 +7,7 @@ services:
     container_name: player0
     #entrypoint: /bin/bash
     ports:
-      - "3000:3000"
+      - "5000:3000"
       - "8000:8000"
     volumes:
       - .:/workspace:cached
@@ -19,7 +19,7 @@ services:
     container_name: chain0
     #entrypoint: /bin/bash
     ports:
-      - "3001:3001"
+      - "5001:3001"
     volumes:
       - .:/workspace:cached
     command: sleep infinity
