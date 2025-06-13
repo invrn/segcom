@@ -227,14 +227,6 @@ fn handle_fire(shared: &SharedData, input_data: &CommunicationData) -> String {
     }
 
     // Ensure the current state matches the board hash in the fire request
-    println!(
-        "DEBUG: Board currently in blockchain {}: {:?}",
-        data.fleet, data.board
-    );
-    println!(
-        "DEBUG: Player current state in blockchain {}: {:?}",
-        data.fleet, player.current_state
-    );
     if player.current_state != data.board {
         let msg = format!(
             "Invalid fire: board hash does not match stored state for fleet {} in game {}",

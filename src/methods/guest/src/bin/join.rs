@@ -43,7 +43,7 @@ fn main() {
 fn is_valid_fleet(board: &[u8]) -> bool {
     use std::collections::HashSet;
     // --- Simple debug flag for quick testing ---
-    const DEBUG_ALLOW_3_SHIP: bool = true; // Set to true for debug mode
+    const DEBUG_ALLOW_3_SHIP: bool = false; // Set to true for debug mode
 
     if DEBUG_ALLOW_3_SHIP {
         if board.len() == 3 {

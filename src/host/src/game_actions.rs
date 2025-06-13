@@ -127,11 +127,6 @@ pub async fn report(idata: FormData) -> String {
         Ok(values) => values,
         Err(err) => return err,
     };
-    // Print the board being passed for debugging
-    println!(
-        "DEBUG: Board passed to report for fleet {}: {:?}",
-        fleetid, board
-    );
 
     // Convert coordinates to a single position (0-99)
     let pos: u8 = y * 10 + x;
